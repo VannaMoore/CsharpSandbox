@@ -24,7 +24,7 @@ namespace ConsoleSkillLab
                     NumbersBucketGame.Bucket();
                     break;
                 case 2:
-                    AgeChecker.UserAge();
+                    AgeChecker.CheckUserAge();
                     break;
                 case 3:
                     break;
