@@ -15,7 +15,8 @@ namespace ConsoleSkillLab
             Console.WriteLine("1. Numbers Bucket Game");
             Console.WriteLine("2. Age checker");
             Console.WriteLine("3. Create a list");
-            Console.WriteLine("4. End Program");
+            Console.WriteLine("4. Find the Sum and Average");
+            Console.WriteLine("5. End Program");
 
             int num = Convert.ToInt32(Console.ReadLine());
 
@@ -31,6 +32,9 @@ namespace ConsoleSkillLab
                     CreateAList.UserList();
                     break;
                 case 4:
+                    SumAverage.SumAndAverage();
+                    break;
+                case 5:
                     break;
 
             }
