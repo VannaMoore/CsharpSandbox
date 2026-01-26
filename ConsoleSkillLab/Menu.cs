@@ -16,7 +16,8 @@ namespace ConsoleSkillLab
             Console.WriteLine("2. Age checker");
             Console.WriteLine("3. Create a list");
             Console.WriteLine("4. Find the Sum and Average");
-            Console.WriteLine("5. End Program");
+            Console.WriteLine("5. Reverse Numbers List");
+            Console.WriteLine("6. End Program");
 
             int num = Convert.ToInt32(Console.ReadLine());
 
@@ -35,6 +36,9 @@ namespace ConsoleSkillLab
                     SumAverage.SumAndAverage();
                     break;
                 case 5:
+                    ReverseListPrint.Reverse();
+                    break;
+                case 6:
                     break;
 
             }
