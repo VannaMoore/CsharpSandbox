@@ -14,11 +14,11 @@ namespace ConsoleSkillLab.Exercises
         {
             bool keepGoing = false;
             int[] numbersList = new int[5];
-            int current = 0;
 
             do
             {
-                Console.WriteLine("You will be prompted to enter 5 numbers that will be put into an array.");
+                int current = 0;
+                Console.WriteLine("\nYou will be prompted to enter 5 numbers that will be put into an array.");
                 Console.WriteLine("The program will print them back in the reverse order in which they were entered.\n");
 
                 for (int i = 0; i < numbersList.Length; i++)
