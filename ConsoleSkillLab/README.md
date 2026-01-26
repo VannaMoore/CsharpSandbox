@@ -68,6 +68,7 @@ Practices array traversal, index logic, and safe loop-based repetition.
 ---
 
 ## Project Structure
+```
 ConsoleSkillLab/
 │
 ├── Exercises/
@@ -83,4 +84,5 @@ ConsoleSkillLab/
 ├── Menu.cs
 ├── Program.cs
 └── README.md
+```
 
