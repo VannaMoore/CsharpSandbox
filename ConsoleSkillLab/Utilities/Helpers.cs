@@ -47,5 +47,29 @@ namespace ConsoleSkillLab.Utilities
             return birthYear;
         }
 
+        public static string ConsonantOrVowelOrNeither(char letter)
+        {
+            string classification;
+
+            if (letter >= 'a' && letter <= 'z')
+            {
+                if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
+                {
+                    classification = "vowel";
+                }
+                else
+                {
+                    classification = "consonant";
+                }
+            }
+            else
+            {
+                classification = "neither";
+            }
+
+
+            return classification;
+        }
+
     }
 }

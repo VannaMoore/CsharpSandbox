@@ -17,7 +17,8 @@ namespace ConsoleSkillLab
             Console.WriteLine("3. Create a list");
             Console.WriteLine("4. Find the Sum and Average");
             Console.WriteLine("5. Reverse Numbers List");
-            Console.WriteLine("6. End Program");
+            Console.WriteLine("6. Letters Bucket Game");
+            Console.WriteLine("7. End Program");
 
             int num = Convert.ToInt32(Console.ReadLine());
 
