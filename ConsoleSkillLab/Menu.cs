@@ -40,6 +40,9 @@ namespace ConsoleSkillLab
                     ReverseListPrint.Reverse();
                     break;
                 case 6:
+                    LetterBucketGame.LetterBucket();
+                    break;
+                case 7:
                     break;
 
             }
