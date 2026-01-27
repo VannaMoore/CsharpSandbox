@@ -10,7 +10,7 @@ A menu-driven console application focused on practicing core C# concepts, includ
 - Methods and class organization
 - Namespaces and access modifiers
 - Basic input validation
-- Simple console-based exercises
+- Console-based exercises focused on algorithm and logic practice.
 
 This project is intentionally kept simple and iterative as a practice exercise.
 
@@ -18,10 +18,10 @@ This project is intentionally kept simple and iterative as a practice exercise.
 This repository serves as a personal sandbox for:
 - Reinforcing C# fundamentals
 - Trying ideas without over-engineering
-- Tracking learning progress over time
+- Developing better muscle memory over time
 
 Projects may be refactored, expanded, or replaced as skills improve.
 
 ## Notes
 - These projects are not production-ready by design.
-- Emphasis is on clarity, structure, and learning and honing skills rather than completeness.
+- Emphasis is on clarity, structure, and honing skills rather than completeness.
