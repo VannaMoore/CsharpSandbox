@@ -5,11 +5,11 @@ using ConsoleSkillLab.Utilities;
 
 namespace ConsoleSkillLab.Exercises
 {
+    // Have the user enter 5 integers in an array.
+    // Use a loop to print them in reverse order.
+    // Constraint: Don't modify the array
     internal class ReverseListPrint
     {
-        // Have the user enter 5 integers in an array.
-        // Use a loop to print them in reverse order.
-        // Constraint: Don't modify the array
         public static void Reverse()
         {
             bool keepGoing = false;
