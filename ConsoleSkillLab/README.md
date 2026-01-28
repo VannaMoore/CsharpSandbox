@@ -93,8 +93,6 @@ Provides reusable helper methods for user input, validation, and classification 
 - ConsonantOrVowelOrNeither()
   Receives a normalized char as input and classifies it as a vowel, consonant or neither.
 
-ConsonantOrVowelOrNeither(char letter)
-Classifies a character as a vowel, consonant, or neither, supporting the Letters Bucket Game.
 ---
 
 ## Project Structure
