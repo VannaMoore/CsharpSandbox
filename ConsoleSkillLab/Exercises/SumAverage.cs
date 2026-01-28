@@ -7,46 +7,46 @@ namespace ConsoleSkillLab.Exercises
     {
         public static void SumAndAverage()
         {
-            int[] userNums = new int[5];
-            int sum = 0;
-            float avg;
+            bool keepGoing = false;
 
-            for (int i = 0; i < 5; i++)
+            do
             {
-                Console.WriteLine("Enter a number.");
-                string? input = Console.ReadLine();
+                int[] userNums = new int[5];
+                int sum = 0;
+                float avg;
 
-                if (int.TryParse(input, out int userNum))
+                for (int i = 0; i < 5; i++)
                 {
-                    userNums[i] = userNum;
-                    Console.WriteLine($"Index {i}: {userNum}\n");
+                    Console.WriteLine("Enter a number.");
+                    string? input = Console.ReadLine();
+
+                    if (int.TryParse(input, out int userNum))
+                    {
+                        userNums[i] = userNum;
+                        Console.WriteLine($"Index {i}: {userNum}\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is not valid input. Enter a number.\n");
+                        i--;
+                    }
                 }
-                else
+
+                for (int i = 0; i < 5; i++)
                 {
-                    Console.WriteLine("That is not valid input. Enter a number.\n");
-                    i--;
-                } 
-            }
+                    sum += userNums[i];
+                }
 
-            for (int i = 0; i < 5; i++)
-            {
-                sum += userNums[i];
-            }
+                avg = (float)sum / userNums.Length;
 
-            avg = (float)sum / userNums.Length;
+                Console.WriteLine($"\nSum: {sum}");
+                Console.WriteLine($"Average: {avg}\n");
 
-            Console.WriteLine($"\nSum: {sum}");
-            Console.WriteLine($"Average: {avg}\n");
-
-            bool userInput = Helpers.Continue();
-            if (userInput)
-            {
-                SumAndAverage();
+                keepGoing = Helpers.Continue();
             }
-            else
-            {
-                Menu.MainMenu();
-            }
+            while (keepGoing);
+            
+            Menu.MainMenu();    
         }
     }
 }
