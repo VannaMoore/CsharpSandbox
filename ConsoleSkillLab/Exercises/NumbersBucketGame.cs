@@ -7,44 +7,46 @@ namespace ConsoleSkillLab.Exercises
     {
         public static void Bucket()
         {
-            Helpers.PickAnyNumber();
-            int num = Convert.ToInt32(Console.ReadLine());
-            int evenOrOdd = num % 2;
+            bool keepGoing = false;
+            do
+            {
+                Helpers.PickAnyNumber();
+                string? numString = Console.ReadLine();
+                if (int.TryParse(numString, out int num))
+                {
+                    int evenOrOdd = num % 2;
 
-            if (num == 0)
-            {
-                Console.WriteLine("Number Bucket: Zero");
-            }
-            else if (num > 0 && evenOrOdd > 0)
-            {
-                Console.WriteLine("Number Bucket: Positive Odd");
-            }
-            else if (num < 0 && evenOrOdd > 0)
-            {
-                Console.WriteLine("Number Bucket: Negative Odd");
-            }
-            else if (num > 0 && evenOrOdd == 0)
-            {
-                Console.WriteLine("Number Bucket: Positive Even");
-            }
-            else if (num < 0 && evenOrOdd == 0)
-            {
-                Console.WriteLine("Number Bucket: Negative Even");
-            }
-            else
-            {
-                Console.WriteLine("That is not a valid integer. Enter a numeric value.");
-            }
+                    if (num == 0)
+                    {
+                        Console.WriteLine("Number Bucket: Zero");
+                    }
+                    else if (num > 0 && evenOrOdd != 0)
+                    {
+                        Console.WriteLine("Number Bucket: Positive Odd");
+                    }
+                    else if (num < 0 && evenOrOdd != 0)
+                    {
+                        Console.WriteLine("Number Bucket: Negative Odd");
+                    }
+                    else if (num > 0 && evenOrOdd == 0)
+                    {
+                        Console.WriteLine("Number Bucket: Positive Even");
+                    }
+                    else if (num < 0 && evenOrOdd == 0)
+                    {
+                        Console.WriteLine("Number Bucket: Negative Even");
+                    } 
+                }
+                else
+                {
+                    Console.WriteLine("That is not valid input.");
+                }
 
-            bool userInput = Helpers.Continue();
-            if (userInput)
-            {
-                Bucket();
+                keepGoing = Helpers.Continue(); // Need to handle input validation
             }
-            else
-            {
-                Menu.MainMenu();
-            }
+            while (keepGoing);
+
+            Menu.MainMenu();
         }
     }
 }

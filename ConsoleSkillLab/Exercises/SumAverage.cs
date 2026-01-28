@@ -8,7 +8,7 @@ namespace ConsoleSkillLab.Exercises
         public static void SumAndAverage()
         {
             bool keepGoing = false;
-
+            // Using iteration instead of recursion to avoid stack growth in repeated menu execution
             do
             {
                 int[] userNums = new int[5];
