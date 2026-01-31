@@ -8,8 +8,11 @@ namespace ConsoleToDoList.Models
 {
     internal class TaskList
     {
-        private string name { get; set; }
-        private List<TaskItem> taskList { get; set; }
-        public DateOnly creationDate { get; set; }
+        // Public properties - Properties that describe the object are readable
+        // Restricted setters - state changing properties are setter restricted
+        // No exposed fields
+        public string name { get; private set; }
+        public List<TaskItem> taskList { get; private set; }
+        public DateOnly creationDate { get; private set; }
     }
 }
