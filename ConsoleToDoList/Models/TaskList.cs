@@ -20,11 +20,16 @@ namespace ConsoleToDoList.Models
         public List<TaskItem> Tasks { get; private set; }
         public DateOnly CreationDate { get; private set; }
 
-        public TaskList(string name, DateOnly todayDate)
+        public TaskList(string name)
         {
             Name = name;
             Tasks = new List<TaskItem>();
-            CreationDate = todayDate;
+            CreationDate = DateOnly.FromDateTime(DateTime.Now);
+        }
+
+        public void ChangeName(string newName)
+        {
+            Name = newName;
         }
     }
 }
