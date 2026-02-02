@@ -31,5 +31,14 @@ namespace ConsoleToDoList.Models
         {
             Name = newName;
         }
+
+        // TaskList owns TaskItems
+        private readonly List<TaskItem> _items = new(); 
+        public IReadOnlyList<TaskItem> Items => _items; 
+
+        public void AddTaskItem(TaskItem item) => _items.Add(item); 
+        public void RemoveTaskItemAt(int index) => _items.RemoveAt(index); 
+        public bool IsValidTaskIndex(int index) => index >= 0 && index < _items.Count;
+        public TaskItem GetTaskItemAt(int index) => _items[index]; 
     }
 }
